@@ -25,6 +25,7 @@ class { 'rails':
 include apt_get::update
 include avahi-daemon
 include git
+include nginx
 include nodejs
 include postgres
 include rails
