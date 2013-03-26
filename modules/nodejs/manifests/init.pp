@@ -1,6 +1,6 @@
 class nodejs {
     $packages = [ 'nodejs', 'nodejs-dev', 'npm' ]
-    package { $packages: 
-        ensure => installed,
+    package { $packages:
+        ensure => latest,
     }
-} 
+}

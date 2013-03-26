@@ -1,6 +1,6 @@
 class git::package {
     package { 'git':
-        ensure => latest,
+        ensure  => latest,
         require => Exec['apt-get update'],
     }
 }
