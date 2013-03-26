@@ -4,7 +4,7 @@ class nginx::pkg {
     refreshonly => true,
   }
 
-  $packages = [ 'nginx', 'nginx-extras' ]
+  $packages = [ 'nginx-full' ]
 
   package { $packages:
     ensure => installed,
