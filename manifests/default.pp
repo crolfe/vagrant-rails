@@ -30,5 +30,6 @@ include nodejs
 include postgres
 include rails
 include ruby
+include sass
 include vim
 
