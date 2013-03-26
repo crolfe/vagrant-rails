@@ -1,4 +1,4 @@
 vagrant-Rails
 =============
 
-A Vagrant box intended to make Ruby on Rails development easier
+A Vagrant (v1.1+) box intended to make Ruby on Rails development easier.
