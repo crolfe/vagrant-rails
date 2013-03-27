@@ -24,11 +24,14 @@ class { 'rails':
 
 include apt_get::update
 include avahi
+include cucumber
 include git
+include haml
 include nginx
 include nodejs
 include postgres
 include rails
+include rspec
 include ruby
 include sass
 include vim
