@@ -7,14 +7,14 @@ class postgres::pkg {
 class postgres::conf {
   File {
     require => Class['postgres::pkg'],
-    notify => Class['postgres::service'],
-    owner => 'postgres',
-    group => 'postgres',
-    mode => 644
+    notify  => Class['postgres::service'],
+    owner   => 'postgres',
+    group   => 'postgres',
+    mode    => 644,
   }
 
   file { 'postgresql/9.1/main':
-    path => '/etc/postgresql/9.1/main',
+    path   => '/etc/postgresql/9.1/main',
     ensure => directory,
   }
 
@@ -28,12 +28,12 @@ class postgres::conf {
 
   file { '/etc/postgresql/9.1/main/pg_hba.conf':
     source => 'puppet:///modules/postgres/9.1/main/pg_hba.conf',
-    mode => 640
+    mode   => '640'
   }
 
   file { '/etc/postgresql/9.1/main/pg_ident.conf':
     source => 'puppet:///modules/postgres/9.1/main/pg_ident.conf',
-    mode => 640
+    mode   => '640'
   }
 
   file { '/etc/postgresql/9.1/main/postgresql.conf':
@@ -47,11 +47,11 @@ class postgres::conf {
 
 class postgres::service {
   service { 'postgresql':
-    ensure => running,
-    enable => true,
-    require => Class['postgres::conf'],
+    ensure     => running,
+    enable     => true,
+    require    => Class['postgres::conf'],
     hasrestart => true,
-    hasstatus => false,
+    hasstatus  => false,
   }
 }
 

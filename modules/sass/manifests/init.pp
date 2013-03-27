@@ -1,6 +1,6 @@
 class sass {
     package { 'sass': 
-        ensure => latest,
+        ensure   => latest,
         provider => gem,
     }
 }

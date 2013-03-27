@@ -1,6 +1,6 @@
 class rails {
     package { 'rails':
-        ensure => latest,
+        ensure   => latest,
         provider => gem,
     }
 }

@@ -2,7 +2,7 @@ stage { 'first':
     before => Stage['second']
 }
 
-stage { 'second': 
+stage { 'second':
     before => Stage['third']
 }
 
