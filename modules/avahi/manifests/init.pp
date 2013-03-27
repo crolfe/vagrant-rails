@@ -7,7 +7,7 @@ class avahi {
         path   => '/etc/avahi/avahi-daemon.conf',
         owner  => root,
         group  => root,
-        source => 'puppet:///modules/avahi-daemon/avahi-daemon.conf',
+        source => 'puppet:///modules/avahi/avahi-daemon.conf',
     }
 }
 
